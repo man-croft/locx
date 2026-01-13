@@ -1,84 +1,96 @@
-# EchoEcho - AI-Powered Echo Chamber Breaker
+# EchoEcho
 
-## Overview
+AI-powered Farcaster mini app that breaks echo chambers by surfacing counter-narratives to trending topics.
 
-EchoEcho is a Farcaster mini app designed to break echo chambers by finding and presenting counter-narratives to trending topics. The application analyzes trending Farcaster casts, uses AI to identify dominant viewpoints, and helps users discover diverse perspectives from both within Farcaster and external platforms like Twitter/X and news sources. Users can "echo" these counter-narratives back to Farcaster and mint NFT "Insight Tokens" to commemorate their echo chamber breaking activities.
+## What is EchoEcho?
 
-The app operates on a freemium model with monetization through premium subscriptions, NFT minting fees, and potential protocol partnerships.
+EchoEcho helps you discover diverse perspectives on Farcaster. When a topic trends, the app analyzes dominant viewpoints and finds counter-narratives from Farcaster, Twitter/X, and news sources. You can share these perspectives back to Farcaster and mint NFT "Insight Tokens" to record your echo chamber breaking activity.
 
-## User Preferences
+The app uses a freemium model: free features for everyone, premium tier for advanced capabilities, plus NFT minting and subscription revenue.
 
-Preferred communication style: Simple, everyday language.
+---
 
-## System Architecture
+## Architecture
 
-### Frontend Architecture
-- **Framework**: Next.js 14 with React 18 for server-side rendering and optimal performance
-- **UI Pattern**: Single-page application with multiple views (trends, echoes, premium features, FAQ) managed through state
-- **Responsive Design**: Mobile-first approach targeting Farcaster's mobile-heavy user base
-- **Real-time Updates**: Client-side polling for trending topics and echo updates
+### Frontend
+- **Next.js 14** + React 18 for performance and SSR
+- Single-page app with multiple views (trends, echoes, premium, FAQ)
+- Mobile-first design optimized for Farcaster users
+- Client-side polling for real-time trending updates
 
-### Backend Architecture
-- **API Routes**: Next.js API routes for all backend functionality
-- **Service Architecture**: Modular API endpoints for distinct features:
-  - `/api/trending` - Fetches trending Farcaster casts
-  - `/api/ai-analysis` - AI sentiment and viewpoint analysis
-  - `/api/cross-platform` - External platform data aggregation
-  - `/api/echo` - Farcaster interaction (recasting)
-  - `/api/mint-nft` - NFT minting for Insight Tokens
-  - `/api/monetization` - Premium tier management
-- **AI Integration**: OpenAI GPT-3.5-turbo for sentiment analysis and counter-narrative discovery
-- **Cross-Platform Data**: Multi-source aggregation from Twitter, news APIs, and potentially other social platforms
+### Backend
+- **Next.js API routes** for all backend logic
+- Modular endpoints for each feature:
+  - `trending` - Fetch trending casts
+  - `ai-analysis` - Sentiment and viewpoint analysis
+  - `cross-platform` - Search Twitter, news, external sources
+  - `echo` - Recast to Farcaster
+  - `mint-nft` - Create Insight Tokens
+  - `monetization` - Premium tier management
+- **OpenAI GPT-3.5-turbo** for AI analysis
+- **Neynar API** for Farcaster data
 
-### Data Flow
-1. Trending topics fetched from Neynar (Farcaster hub)
-2. AI analysis applied to identify dominant sentiment/viewpoint
-3. Cross-platform search for counter-narratives
-4. User interaction triggers either direct echoing or NFT minting
-5. Premium features gated through tier verification
+### User Flow
+1. App fetches trending Farcaster topics
+2. AI analyzes dominant sentiment/viewpoint
+3. Cross-platform search finds counter-narratives
+4. User can echo topic back or mint NFT
+5. Premium features require tier verification
 
-### Authentication & User Management
-- **Wallet-Based Auth**: Ethereum wallet connection for user identification
-- **Farcaster Integration**: Direct integration with Farcaster accounts
-- **Tier Management**: User subscription tiers (Free, Premium, Pro) with feature gating
+### Authentication
+- Wallet-based auth (Ethereum)
+- Direct Farcaster account integration
+- Subscription tiers: Free, Premium, Pro
 
-### Monetization Architecture
-- **Freemium Model**: Basic features free, advanced features behind paywall
-- **NFT Economy**: Insight Tokens with rarity-based pricing
-- **USDC Payments**: Base network integration for subscription payments
-- **Revenue Sharing**: Future partnerships with content platforms
+### Monetization
+- Premium features behind paywall
+- Insight Token NFTs (variable pricing)
+- USDC payments on Base network
+- Future platform partnerships
 
-## External Dependencies
+---
 
-### Core Social Platform APIs
-- **Neynar API**: Primary Farcaster data source for trending casts and user interactions
-- **Twitter/X API v2**: Cross-platform content discovery with bearer token authentication
-- **NewsAPI**: External news source integration for broader perspective discovery
+## Dependencies
 
-### AI and Machine Learning
-- **OpenAI API**: GPT-3.5-turbo for sentiment analysis, viewpoint identification, and counter-narrative generation
-- **Custom AI Prompts**: Specialized prompts for social media sentiment analysis and bias detection
+### Social APIs
+- **Neynar**: Farcaster data and trending casts
+- **Twitter/X API v2**: Cross-platform content
+- **NewsAPI**: News source aggregation
 
-### Blockchain Infrastructure
-- **Viem**: Ethereum interaction library for wallet connections and smart contract interactions
-- **Wagmi**: React hooks for Ethereum wallet integration
-- **Base Network**: Layer 2 solution for low-cost NFT minting and USDC payments
-- **USDC Contract**: Stablecoin payments for premium subscriptions
+### AI
+- **OpenAI GPT-3.5-turbo**: Sentiment, bias detection, counter-narratives
+- Custom analysis prompts
 
-### Development and Deployment
-- **Next.js**: Full-stack React framework with API routes
-- **Vercel**: Deployment platform optimized for Next.js applications
-- **Node-fetch**: HTTP client for external API calls
+### Blockchain
+- **Viem** + **Wagmi**: Ethereum wallet integration
+- **Base Network**: Low-cost NFT minting and USDC
+- **USDC Contract**: Stablecoin payments
 
-### Content and Media
-- **DiceBear API**: Procedural avatar generation for NFT imagery
-- **Farcaster Protocol**: Native mini-app integration with proper manifest configuration
+### Infrastructure
+- **Next.js**: Full-stack framework
+- **Vercel**: Deployment platform
+- **Node-fetch**: HTTP requests
 
-### Environment Configuration
-Required environment variables:
-- `NEYNAR_API_KEY`: Farcaster data access
-- `OPENAI_API_KEY`: AI analysis capabilities  
-- `X_BEARER_TOKEN`: Twitter/X content access
-- `NEWS_API_KEY`: News content aggregation
+### Media
+- **DiceBear API**: Avatar generation for NFTs
+- **Farcaster Protocol**: Mini-app integration
 
-The architecture emphasizes modularity and scalability, allowing for easy addition of new content sources and monetization features while maintaining performance and user experience standards expected in the Farcaster ecosystem.
+### Environment Variables
+```
+NEYNAR_API_KEY=<farcaster-data-access>
+OPENAI_API_KEY=<ai-analysis>
+X_BEARER_TOKEN=<twitter-api>
+NEWS_API_KEY=<news-aggregation>
+```
+
+---
+
+## Key Features
+
+- 🔄 Real-time trending topic analysis
+- 🤖 AI-powered counter-narrative discovery
+- 🌐 Cross-platform perspective surfacing
+- 📝 One-click echo to Farcaster
+- 🎖️ NFT minting for milestones
+- 💎 Premium tier features
+- 📱 Mobile-optimized experience
