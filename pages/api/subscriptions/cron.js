@@ -9,7 +9,7 @@ import {
 } from '../../../lib/storage.js';
 
 const CRON_SECRET = process.env.CRON_SECRET;
-const NEXT_PUBLIC_URL = process.env.NEXT_PUBLIC_URL || 'https://echoechos.vercel.app';
+const NEXT_PUBLIC_URL = process.env.NEXT_PUBLIC_URL || 'https://locxs.vercel.app';
 
 if (!CRON_SECRET) {
   throw new Error('CRON_SECRET environment variable must be set for security');
@@ -56,7 +56,7 @@ export default async function handler(req, res) {
           if (user?.notification_token && user?.notification_url) {
             try {
               await client.casts.create({
-                text: `EchoEcho Subscription Reminder\nYour ${subscription.tier} subscription expires in 3 days! Renew now at ${NEXT_PUBLIC_URL}/premium`,
+                text: `locx Subscription Reminder\nYour ${subscription.tier} subscription expires in 3 days! Renew now at ${NEXT_PUBLIC_URL}/premium`,
                 channelId: 'your-channel-id', // Replace with your Farcaster channel ID
                 embeds: [{ url: `${NEXT_PUBLIC_URL}/premium` }],
               });
@@ -83,7 +83,7 @@ export default async function handler(req, res) {
           if (user?.notification_token && user?.notification_url) {
             try {
               await client.casts.create({
-                text: `EchoEcho Subscription Reminder\nYour ${subscription.tier} subscription expires tomorrow! Renew now at ${NEXT_PUBLIC_URL}/premium`,
+                text: `locx Subscription Reminder\nYour ${subscription.tier} subscription expires tomorrow! Renew now at ${NEXT_PUBLIC_URL}/premium`,
                 channelId: 'your-channel-id', // Replace with your Farcaster channel ID
                 embeds: [{ url: `${NEXT_PUBLIC_URL}/premium` }],
               });
@@ -113,7 +113,7 @@ export default async function handler(req, res) {
           if (user?.notification_token && user?.notification_url) {
             try {
               await client.casts.create({
-                text: `EchoEcho Subscription Expired\nYour ${subscription.tier} subscription has expired and been downgraded to free. Upgrade again at ${NEXT_PUBLIC_URL}/premium`,
+                text: `locx Subscription Expired\nYour ${subscription.tier} subscription has expired and been downgraded to free. Upgrade again at ${NEXT_PUBLIC_URL}/premium`,
                 channelId: 'your-channel-id', // Replace with your Farcaster channel ID
                 embeds: [{ url: `${NEXT_PUBLIC_URL}/premium` }],
               });

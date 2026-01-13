@@ -1,10 +1,10 @@
-# EchoEcho
+# locx
 
 AI-powered Farcaster mini app that breaks echo chambers by surfacing counter-narratives to trending topics.
 
-## What is EchoEcho?
+## What is locx?
 
-EchoEcho helps you discover diverse perspectives on Farcaster. When a topic trends, the app analyzes dominant viewpoints and finds counter-narratives from Farcaster, Twitter/X, and news sources. You can share these perspectives back to Farcaster and mint NFT "Insight Tokens" to record your echo chamber breaking activity.
+locx helps you discover diverse perspectives on Farcaster. When a topic trends, the app analyzes dominant viewpoints and finds counter-narratives from Farcaster, Twitter/X, and news sources. You can share these perspectives back to Farcaster and mint NFT "Insight Tokens" to record your echo chamber breaking activity.
 
 The app uses a freemium model: free features for everyone, premium tier for advanced capabilities, plus NFT minting and subscription revenue.
 
@@ -107,8 +107,8 @@ NEWS_API_KEY=<news-aggregation>
 
 ### Installation
 ```bash
-git clone https://github.com/investorphem/echoecho.git
-cd echoecho
+git clone https://github.com/investorphem/locx.git
+cd locx
 yarn install
 ```
 
@@ -138,7 +138,7 @@ yarn start
 ## Project Structure
 
 ```
-echoecho/
+locx/
 ├── pages/              # Next.js pages and API routes
 │   ├── api/           # Backend API endpoints
 │   ├── index.js       # Home page

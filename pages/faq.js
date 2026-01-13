@@ -51,12 +51,12 @@ export default function FAQ() {
 
   const faqData = [
     {
-      question: "🌟 What is EchoEcho?",
+      question: "🌟 What is locx?",
       answer: (
         <div>
-          <p><strong>EchoEcho is an AI-powered Farcaster miniapp that breaks echo chambers by discovering counter-narratives from multiple platforms.</strong></p>
+          <p><strong>locx is an AI-powered Farcaster miniapp that breaks echo chambers by discovering counter-narratives from multiple platforms.</strong></p>
           <br />
-          <p>Instead of staying in your usual bubble, EchoEcho finds opposing viewpoints from:</p>
+          <p>Instead of staying in your usual bubble, locx finds opposing viewpoints from:</p>
           <ul style={{ marginLeft: '20px', marginTop: '8px' }}>
             <li>🟣 <strong>Farcaster</strong> - Alternative perspectives in the decentralized social space</li>
             <li>🔵 <strong>X (Twitter)</strong> - Diverse opinions from global conversations</li>
@@ -71,7 +71,7 @@ export default function FAQ() {
       question: "💰 How do I earn money as a user?",
       answer: (
         <div>
-          <p><strong>EchoEcho offers multiple ways to earn as you break echo chambers:</strong></p>
+          <p><strong>locx offers multiple ways to earn as you break echo chambers:</strong></p>
           <br />
           <div style={{ marginLeft: '16px' }}>
             <p><strong>🎯 Echo Rewards:</strong> $0.01 per echo you make</p>
@@ -139,7 +139,7 @@ export default function FAQ() {
       question: "💳 How do I pay with USDC on Base?",
       answer: (
         <div>
-          <p><strong>EchoEcho uses USDC payments on Base blockchain for fast, cheap transactions:</strong></p>
+          <p><strong>locx uses USDC payments on Base blockchain for fast, cheap transactions:</strong></p>
           <br />
           <div style={{ backgroundColor: '#1e40af', padding: '12px', borderRadius: '6px', marginBottom: '12px' }}>
             <p><strong>🔗 Payment Process:</strong></p>
@@ -314,10 +314,10 @@ export default function FAQ() {
       <div style={{ maxWidth: '800px', margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: '40px' }}>
           <h1 style={{ fontSize: '36px', marginBottom: '16px', background: 'linear-gradient(45deg, #60a5fa, #a78bfa)', backgroundClip: 'text', WebkitBackgroundClip: 'text', color: 'transparent' }}>
-            🌟 EchoEcho FAQ
+            🌟 locx FAQ
           </h1>
           <p style={{ fontSize: '18px', color: '#94a3b8' }}>
-            Everything you need to know about breaking echo chambers and earning with EchoEcho
+            Everything you need to know about breaking echo chambers and earning with locx
           </p>
         </div>
 
