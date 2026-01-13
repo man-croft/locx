@@ -94,3 +94,96 @@ NEWS_API_KEY=<news-aggregation>
 - 🎖️ NFT minting for milestones
 - 💎 Premium tier features
 - 📱 Mobile-optimized experience
+
+---
+
+## Getting Started
+
+### Prerequisites
+- Node.js 18+
+- Yarn or npm
+- Ethereum wallet (MetaMask recommended)
+- API keys for: Neynar, OpenAI, Twitter/X, NewsAPI
+
+### Installation
+```bash
+git clone https://github.com/investorphem/echoecho.git
+cd echoecho
+yarn install
+```
+
+### Configuration
+Create a `.env.local` file:
+```bash
+NEYNAR_API_KEY=your_key_here
+OPENAI_API_KEY=your_key_here
+X_BEARER_TOKEN=your_key_here
+NEWS_API_KEY=your_key_here
+```
+
+### Development
+```bash
+yarn dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Production
+```bash
+yarn build
+yarn start
+```
+
+---
+
+## Project Structure
+
+```
+echoecho/
+├── pages/              # Next.js pages and API routes
+│   ├── api/           # Backend API endpoints
+│   ├── index.js       # Home page
+│   ├── faq.js         # FAQ page
+│   └── _app.js        # App wrapper
+├── components/        # React components
+├── lib/              # Utilities and helpers
+├── public/           # Static assets
+├── styles/           # Global styles
+├── data/             # Static data
+├── db/               # Database schema
+└── package.json      # Dependencies
+```
+
+---
+
+## API Endpoints
+
+| Endpoint | Method | Purpose |
+|----------|--------|---------|
+| `/api/trending` | GET | Fetch trending casts |
+| `/api/ai-analysis` | POST | Analyze sentiment/viewpoint |
+| `/api/cross-platform` | POST | Search counter-narratives |
+| `/api/echo` | POST | Recast to Farcaster |
+| `/api/mint-nft` | POST | Create Insight Token |
+| `/api/user-echoes` | GET | Get user's echo history |
+| `/api/premium-check` | GET | Verify premium status |
+
+---
+
+## Deployment
+
+The app is optimized for **Vercel** deployment:
+
+1. Push code to GitHub
+2. Connect repository to Vercel
+3. Add environment variables in Vercel dashboard
+4. Deploy with one click
+
+---
+
+## License
+
+MIT
+
+## Contributing
+
+Contributions welcome! Please open an issue or pull request.
