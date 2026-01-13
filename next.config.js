@@ -5,11 +5,11 @@ const nextConfig = {
   output: 'standalone',
 
   images: {
-    domains: ['echoechos.vercel.app', 'farcaster.xyz', 'warpcast.com'],
+    domains: ['locxs.vercel.app', 'farcaster.xyz', 'warpcast.com'],
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'echoechos.vercel.app',
+        hostname: 'locxs.vercel.app',
         pathname: '/**',
       },
       {
@@ -30,7 +30,7 @@ const nextConfig = {
   },
 
   env: {
-    NEXT_PUBLIC_URL: process.env.NEXT_PUBLIC_URL || 'https://echoechos.vercel.app',
+    NEXT_PUBLIC_URL: process.env.NEXT_PUBLIC_URL || 'https://locxs.vercel.app',
     ALLOWED_ORIGINS: process.env.ALLOWED_ORIGINS || 'https://warpcast.com,https://farcaster.xyz',
   },
 

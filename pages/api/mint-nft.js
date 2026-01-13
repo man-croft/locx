@@ -66,7 +66,7 @@ export default async function handler(req, res) {
     // Upload metadata to IPFS - LOGIC REMOVED
     // const cid = await jsonClient.add(metadata);
     // const ipfsUrl = `https://ipfs.io/ipfs/${cid.toString()}`;
-    const ipfsUrl = `echoecho.app`; // Placeholder URI
+    const ipfsUrl = `locx.app`; // Placeholder URI
 
     // Note: Actual minting requires a wallet client with private key (not secure in API route)
     // For production, move minting to client-side or a secure backend service

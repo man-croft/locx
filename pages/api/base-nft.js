@@ -70,7 +70,7 @@ export default async function handler(req, res) {
 
     // Create metadata (Placeholder URI since IPFS upload is disabled)
     const metadata = {
-      name: `EchoEcho Insight Token`,
+      name: `locx Insight Token`,
       description: `Counter-narrative discovered: "${narrative.text.slice(0, 100)}..."`,
       attributes: [
         { trait_type: 'Source', value: narrative.source },
@@ -79,11 +79,11 @@ export default async function handler(req, res) {
         { trait_type: 'Discovery Date', value: new Date().toDateString() },
         { trait_type: 'Network', value: 'Base' },
       ],
-      external_url: 'https://echoecho.app',
+      external_url: 'https://locx.app',
       animation_url: null,
     };
-    const metadataURI = `echoecho.app{tokenId}`; // Placeholder URI
-    const imageURI = `echoecho.app`; // Placeholder Image
+    const metadataURI = `locx.app{tokenId}`; // Placeholder URI
+    const imageURI = `locx.app`; // Placeholder Image
 
     // Upload metadata to IPFS - LOGIC REMOVED
     // const cid = await ipfs.add(metadata);
